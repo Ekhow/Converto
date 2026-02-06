@@ -153,4 +153,7 @@ def convert():
         return f"<h1>Erreur</h1><p>{str(e)}</p><a href='/'>Retour</a>"
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    # On récupère le port donné par Render, sinon on utilise 5000 par défaut
+    port = int(os.environ.get("PORT", 5000))
+    # host='0.0.0.0' est INDISPENSABLE pour que Render puisse voir ton site
+    app.run(host='0.0.0.0', port=port)
