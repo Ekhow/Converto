@@ -1,0 +1,5 @@
+ffmpeg*/
+__pycache__/
+*.webm
+*.mp3
+*.mp4
